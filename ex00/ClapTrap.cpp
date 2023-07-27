@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:22:53 by aaslan            #+#    #+#             */
-/*   Updated: 2023/07/26 19:12:46 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/07/27 23:33:29 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,34 @@
 
 ClapTrap::ClapTrap(void)
 {
-	std::cout << "ClapTrap - Default constructor called" << std::endl;
-
-	name = "Ali";
+	name = "Unknown";
 	hitPoints = 10;
 	energyPoints = 10;
 	attackDamage = 0;
+
+	std::cout << "ClapTrap - Default constructor called for " << name << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string nameValue)
 {
-	std::cout << "ClapTrap - Name constructor called" << std::endl;
-
 	name = nameValue;
 	hitPoints = 10;
 	energyPoints = 10;
 	attackDamage = 0;
+
+	std::cout << "ClapTrap - Name constructor called for " << name << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-	std::cout << "ClapTrap - Copy constructor called" << std::endl;
+	std::cout << "ClapTrap - Copy constructor called for " << name << std::endl;
 
 	*this = other;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
-	std::cout << "ClapTrap - Copy assignment operator called" << std::endl;
+	std::cout << "ClapTrap - Copy assignment operator called for " << name << std::endl;
 
 	// verilen nesne kendisi değilse atamayı yap
 	if (this != &other)
@@ -57,7 +57,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "ClapTrap - Destructor called" << std::endl;
+	std::cout << "ClapTrap - Destructor called for " << name << std::endl;
 }
 
 void ClapTrap::attack(const std::string &target)
@@ -92,7 +92,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	std::cout << "ClapTrap - " << name << " takes damage of " << amount << ", causing healt drop to " << hitPoints << ". ";
 
 	if (hitPoints <= 0)
-		std::cout << "ClapTrap - " << name << " has taken critical amount of damage and is dead!" << std::endl;
+		std::cout << name << " has taken critical amount of damage and is dead!" << std::endl;
 	else
 		std::cout << "\n";
 }

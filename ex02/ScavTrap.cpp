@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 22:14:25 by aaslan            #+#    #+#             */
-/*   Updated: 2023/07/26 19:09:00 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/07/27 23:34:45 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,34 @@
 
 ScavTrap::ScavTrap(void) : ClapTrap()
 {
-	std::cout << "ScavTrap - Default constructor called" << std::endl;
-
-	name = "Ali";
+	name = "Unknown";
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 20;
+
+	std::cout << "ScavTrap - Default constructor called for " << name << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string nameValue) : ClapTrap(nameValue)
 {
-	std::cout << "ScavTrap - Name constructor called" << std::endl;
-
 	name = nameValue;
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 20;
+
+	std::cout << "ScavTrap - Name constructor called for " << name << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
-	std::cout << "ScavTrap - Copy constructor called" << std::endl;
+	std::cout << "ScavTrap - Copy constructor called for " << name << std::endl;
 
 	*this = other;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
-	std::cout << "ScavTrap - Copy assignment operator called" << std::endl;
+	std::cout << "ScavTrap - Copy assignment operator called for " << name << std::endl;
 
 	// verilen nesne kendisi değilse atamayı yap
 	if (this != &other)
@@ -57,7 +57,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "ScavTrap - Destructor called" << std::endl;
+	std::cout << "ScavTrap - Destructor called for " << name << std::endl;
 }
 
 void ScavTrap::attack(const std::string &target)
