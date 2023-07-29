@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 22:14:25 by aaslan            #+#    #+#             */
-/*   Updated: 2023/07/27 23:33:46 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/07/29 19:51:42 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
 	std::cout << "ScavTrap - Copy assignment operator called for " << name << std::endl;
 
-	// verilen nesne kendisi değilse atamayı yap
 	if (this != &other)
 	{
 		name = other.name;

@@ -6,14 +6,14 @@
 #    By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/24 11:23:19 by aaslan            #+#    #+#              #
-#    Updated: 2023/07/27 22:23:44 by aaslan           ###   ########.fr        #
+#    Updated: 2023/07/29 19:57:11 by aaslan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		:= diamondTrap
 CXX			:= c++
 CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98 -Wshadow -g
-SRC			:= $(wildcard *.cpp)
+SRC			:= ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp main.cpp
 
 all: $(NAME)
 

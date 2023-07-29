@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:22:53 by aaslan            #+#    #+#             */
-/*   Updated: 2023/07/27 23:35:09 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/07/29 19:55:06 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
 	std::cout << "ClapTrap - Copy assignment operator called for " << name << std::endl;
 
-	// verilen nesne kendisi değilse atamayı yap
 	if (this != &other)
 	{
 		name = other.name;

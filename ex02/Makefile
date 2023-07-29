@@ -6,14 +6,14 @@
 #    By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/24 11:23:19 by aaslan            #+#    #+#              #
-#    Updated: 2023/07/26 22:34:24 by aaslan           ###   ########.fr        #
+#    Updated: 2023/07/29 19:53:16 by aaslan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		:= fragTrap
 CXX			:= c++
 CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98
-SRC			:= $(wildcard *.cpp)
+SRC			:= ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 
 all: $(NAME)
 

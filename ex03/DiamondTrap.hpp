@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 16:44:42 by aaslan            #+#    #+#             */
-/*   Updated: 2023/07/27 21:22:03 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/07/29 19:55:52 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	DiamondTrap &operator=(const DiamondTrap &other);
 	~DiamondTrap(void);
 
-	using ScavTrap::attack;
+	void attack(const std::string &target);
 	void whoAmI(void);
 };
 

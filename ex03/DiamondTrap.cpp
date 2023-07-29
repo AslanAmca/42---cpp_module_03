@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 16:44:25 by aaslan            #+#    #+#             */
-/*   Updated: 2023/07/27 23:35:22 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/07/29 19:56:19 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 {
 	std::cout << "DiamondTrap - Copy assignment operator called for " << name << std::endl;
 
-	// verilen nesne kendisi değilse atamayı yap
 	if (this != &other)
 	{
 		name = other.name;
@@ -58,6 +57,11 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 DiamondTrap::~DiamondTrap(void)
 {
 	std::cout << "DiamondTrap - Destructor called for " << name << std::endl;
+}
+
+void DiamondTrap::attack(const std::string &target)
+{
+	ScavTrap::attack(target);
 }
 
 void DiamondTrap::whoAmI(void)

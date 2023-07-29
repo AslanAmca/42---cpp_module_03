@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 22:14:26 by aaslan            #+#    #+#             */
-/*   Updated: 2023/07/27 23:35:29 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/07/29 19:56:27 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 {
 	std::cout << "FragTrap - Copy assignment operator called for " << name << std::endl;
 
-	// verilen nesne kendisi değilse atamayı yap
 	if (this != &other)
 	{
 		name = other.name;
