@@ -12,7 +12,7 @@
 
 NAME		:= diamondTrap
 CXX			:= c++
-CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98 -Wshadow -g
+CXXFLAGS	:= -Wall -Wextra -Werror -std=c++98
 SRC			:= ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp main.cpp
 
 all: $(NAME)
